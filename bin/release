@@ -10,7 +10,12 @@ MANAGE_FILE=${MANAGE_FILE:2}
 cat <<EOF
 ---
 config_vars:
-
+  PATH: bin:/usr/local/bin:/usr/bin:/bin
+  PYTHONUNBUFFERED: true
+  LIBRARY_PATH: .heroku/vendor/lib:/app/.gis/proj4/lib:/app/.gis/gdal/lib:/app/.gis/geos/lib
+  LD_LIBRARY_PATH: .heroku/vendor/lib:/app/.gis/proj4/lib:/app/.gis/gdal/lib:/app/.gis/geos/lib
+  LANG: en_US.UTF-8
+  PYTHONPATH: /app
 EOF
 
 
